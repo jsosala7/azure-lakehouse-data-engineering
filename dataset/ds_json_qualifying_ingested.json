@@ -1,0 +1,20 @@
+{
+	"name": "ds_json_qualifying_ingested",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_lakehouse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "ingested/qualifying",
+				"fileSystem": "raw"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

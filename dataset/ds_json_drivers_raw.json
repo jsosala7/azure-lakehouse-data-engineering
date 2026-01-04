@@ -1,0 +1,57 @@
+{
+	"name": "ds_json_drivers_raw",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_lakehouse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "drivers.json",
+				"folderPath": "landing",
+				"fileSystem": "raw"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"driverId": {
+					"type": "integer"
+				},
+				"driverRef": {
+					"type": "string"
+				},
+				"number": {
+					"type": "null"
+				},
+				"code": {
+					"type": "string"
+				},
+				"name": {
+					"type": "object",
+					"properties": {
+						"forename": {
+							"type": "string"
+						},
+						"surname": {
+							"type": "string"
+						}
+					}
+				},
+				"dob": {
+					"type": "string"
+				},
+				"nationality": {
+					"type": "string"
+				},
+				"url": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

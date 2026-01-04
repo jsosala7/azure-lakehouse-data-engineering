@@ -1,0 +1,51 @@
+{
+	"name": "ds_json_stops_ingested",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_lakehouse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "ingested",
+				"fileSystem": "raw"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"qualifyId": {
+					"type": "integer"
+				},
+				"raceId": {
+					"type": "integer"
+				},
+				"driverId": {
+					"type": "integer"
+				},
+				"constructorId": {
+					"type": "integer"
+				},
+				"number": {
+					"type": "integer"
+				},
+				"position": {
+					"type": "integer"
+				},
+				"q1": {
+					"type": "string"
+				},
+				"q2": {
+					"type": "string"
+				},
+				"q3": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

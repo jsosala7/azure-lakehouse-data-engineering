@@ -1,0 +1,9 @@
+{
+	"name": "adf-lakehouse-f1",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6e0177d4-6db1-44f7-bcc6-3c0bf8682eae",
+		"tenantId": "fb91bc9d-317e-46d6-8732-073d04681897"
+	}
+}

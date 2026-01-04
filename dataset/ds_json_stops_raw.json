@@ -1,0 +1,46 @@
+{
+	"name": "ds_json_stops_raw",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_lakehouse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "pit_stops.json",
+				"folderPath": "landing",
+				"fileSystem": "raw"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"raceId": {
+					"type": "integer"
+				},
+				"driverId": {
+					"type": "integer"
+				},
+				"stop": {
+					"type": "integer"
+				},
+				"lap": {
+					"type": "integer"
+				},
+				"time": {
+					"type": "string"
+				},
+				"duration": {
+					"type": "number"
+				},
+				"milliseconds": {
+					"type": "integer"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

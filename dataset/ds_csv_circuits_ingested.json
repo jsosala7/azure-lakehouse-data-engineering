@@ -1,0 +1,49 @@
+{
+	"name": "ds_csv_circuits_ingested",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_lakehouse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "ingested",
+				"fileSystem": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "841",
+				"type": "String"
+			},
+			{
+				"name": "20",
+				"type": "String"
+			},
+			{
+				"name": "12",
+				"type": "String"
+			},
+			{
+				"name": "13",
+				"type": "String"
+			},
+			{
+				"name": "1:38.109",
+				"type": "String"
+			},
+			{
+				"name": "98109",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
